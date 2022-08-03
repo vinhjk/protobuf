@@ -1,0 +1,35 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package com.example.blue_bik;
+
+message UserRequest{
+  int64 id = 1;
+  string firstName = 2;
+  string lastName = 3;
+  string fullName = 4;
+  string address = 5;
+  string gender = 6;
+  string phoneNumber = 7;
+  string email = 8;
+  int64 age = 9;
+}
+
+message UserResponse{
+  string fullName = 1;
+  string address = 2;
+  string gender = 3;
+  string phoneNumber = 4;
+  string email = 5;
+  int64 age = 6;
+}
+
+message Users{
+  repeated UserResponse userResponse = 1;
+}
+
+message GetUser{
+  string keyword = 1;
+}
+service UserService{
+  rpc getUsers (GetUser) returns (Users) {};
+}
