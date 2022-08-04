@@ -18,29 +18,24 @@
     </properties>
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/io.grpc/grpc-stub -->
-        <dependency>
             <groupId>io.grpc</groupId>
-            <artifactId>grpc-stub</artifactId>
+            <artifactId>grpc-netty-shaded</artifactId>
             <version>1.47.0</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/io.grpc/grpc-protobuf -->
         <dependency>
             <groupId>io.grpc</groupId>
             <artifactId>grpc-protobuf</artifactId>
             <version>1.47.0</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/io.grpc/grpc-netty -->
         <dependency>
             <groupId>io.grpc</groupId>
-            <artifactId>grpc-netty</artifactId>
+            <artifactId>grpc-stub</artifactId>
             <version>1.47.0</version>
         </dependency>
-
-
+        <dependency>
+            <groupId>jakarta.annotation</groupId>
+            <artifactId>jakarta.annotation-api</artifactId>
+        </dependency>
     </dependencies>
     <build>
         <extensions>
